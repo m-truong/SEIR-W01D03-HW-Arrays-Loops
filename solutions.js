@@ -79,6 +79,16 @@ whereIsWaldo[1][2] = "No One";
 ////////////////////////////////
 // Excited Kitten
 ////////////////////////////////
+const kittyTalk = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "...why does the red dot always get away..."]; 
+const kittyLength = kittyTalk.length; 
+
+for (let k = 1 ; k <= 20 ; k ++ ) {
+    console.log("Love me, pet me! HSSSSSS");
+        if (k % 2 === 0) {
+            let meow = Math.floor((Math.random()*kittyLength));
+            console.log(kittyTalk[meow]); 
+        } 
+}
 
 
 ////////////////////////////////
