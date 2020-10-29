@@ -2,29 +2,29 @@
 // Easy Going
 ////////////////////////////////
 for (let k = 1 ; k <= 20  ; k++) {
-    // console.log(k); 
+    console.log(k); 
 }
 
 ////////////////////////////////
 // Get Even
 ////////////////////////////////
 for (let k = 0 ; k <= 200 ; k +=2) {
-    // console.log(k);
+    console.log(k);
 }
 
 ////////////////////////////////
 // Fizz Buzz
 ////////////////////////////////
 for (let k = 1 ; k <= 100 ; k ++) {
-    // if ((k % 3 === 0) && (k % 5 === 0)) {
-    //     console.log("FizzBuzz"); 
-    // } else if (k % 5 === 0) {
-    //     console.log("Buzz"); 
-    // } else if (k % 3 === 0) {
-    //     console.log("Fizz");
-    // } else {
-    //     console.log(k); 
-    // }
+    if ((k % 3 === 0) && (k % 5 === 0)) {
+        console.log("FizzBuzz"); 
+    } else if (k % 5 === 0) {
+        console.log("Buzz"); 
+    } else if (k % 3 === 0) {
+        console.log("Fizz");
+    } else {
+        console.log(k); 
+    }
 }
 
 ////////////////////////////////
@@ -59,7 +59,7 @@ wolfy[0] = "Gameboy";
 ////////////////////////////////
 const ninjaTurtles = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"];
 for (const ninja of ninjaTurtles) {
-    // console.log(ninja.toUpperCase()); 
+    console.log(ninja.toUpperCase()); 
 }
 
 ////////////////////////////////
@@ -74,7 +74,7 @@ whereIsWaldo.splice(1, 1);
 // 2. Change "Neff" to "No One"
 whereIsWaldo[1][2] = "No One"; 
 
-// console.log(whereIsWaldo);
+console.log(whereIsWaldo);
 
 ////////////////////////////////
 // Excited Kitten
@@ -83,11 +83,11 @@ const kittyTalk = ["...human...why you taking pictures of me?...", "...the catni
 const kittyLength = kittyTalk.length; 
 
 for (let k = 1 ; k <= 20 ; k ++ ) {
-    // console.log("Love me, pet me! HSSSSSS");
-    //     if (k % 2 === 0) {
-    //         let meow = Math.floor((Math.random()*kittyLength));
-    //         console.log(kittyTalk[meow]); 
-    //     } 
+    console.log("Love me, pet me! HSSSSSS");
+        if (k % 2 === 0) {
+            let meow = Math.floor((Math.random()*kittyLength));
+            console.log(kittyTalk[meow]); 
+        } 
 }
 
 ////////////////////////////////
@@ -105,3 +105,60 @@ console.log(median);
 ////////////////////////////////
 // Practice With Objects
 ////////////////////////////////
+let ship = {
+    name: 'Millennium Falcon',
+    speed: 11,
+    crew: ['Han Solo', 'Chewbacca'],
+    passengers: [],
+    famous: true,
+    heardOfIt: function() {
+      console.log("You've never heard of the millennium falcon!?");
+      this.famous = false;
+    },
+    addPassenger: function(passenger) {
+      this.passengers.push(passenger);
+    },
+    removePassenger: function(passenger) {
+      let index = this.passengers.indexOf(passenger);
+      this.passengers.splice(index, 1);
+    }
+  };
+
+//   1. console log the name 
+  console.log(ship.name); 
+
+//   2. change the speed to 13 
+ship.speed = 13; 
+console.log(ship.speed);
+
+// 3. Add 2 passengers, "Leia" and "Luke" 
+ship.addPassenger("Leia"); 
+ship.addPassenger("Luke"); 
+console.log(ship.passengers); 
+
+// 4. console log whether it's famous or not
+console.log(ship.famous); 
+
+// 5. Ask if you've heard of the millenium falcon
+ship.heardOfIt(); 
+
+// 6. console log if it's still famous
+console.log(ship.famous); 
+
+// 7. remove Leia as a passenger
+ship.removePassenger("Leia"); 
+console.log(ship.passengers);
+
+// 8. add a new property called "color" and set it equal to "beige" 
+ship.color = "beige"; 
+console.log(ship.color); 
+
+// 9. Add a new property called "missions" and set it equal to an empty object
+ship.missions = {}; 
+console.log(ship.missions);
+
+// 10. Add 3 properties to "missions"
+ship.missions.kashyyk = true; 
+ship.missions.escapeFromAsteroid = "scary";
+ship.missions.smuggledCargo = ["prisoners", "stolen goods", "unobtanium"];
+console.log(ship);
