@@ -83,14 +83,25 @@ const kittyTalk = ["...human...why you taking pictures of me?...", "...the catni
 const kittyLength = kittyTalk.length; 
 
 for (let k = 1 ; k <= 20 ; k ++ ) {
-    console.log("Love me, pet me! HSSSSSS");
-        if (k % 2 === 0) {
-            let meow = Math.floor((Math.random()*kittyLength));
-            console.log(kittyTalk[meow]); 
-        } 
+    // console.log("Love me, pet me! HSSSSSS");
+    //     if (k % 2 === 0) {
+    //         let meow = Math.floor((Math.random()*kittyLength));
+    //         console.log(kittyTalk[meow]); 
+    //     } 
 }
-
 
 ////////////////////////////////
 // Find the Median
+////////////////////////////////
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+nums.sort(function(a,b) {
+    return a - b; 
+});
+const halfway = nums.length/2;
+const rounded = Math.floor(halfway); 
+const median = nums[rounded];
+console.log(median);
+
+////////////////////////////////
+// Practice With Objects
 ////////////////////////////////
