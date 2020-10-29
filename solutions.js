@@ -59,14 +59,22 @@ wolfy[0] = "Gameboy";
 ////////////////////////////////
 const ninjaTurtles = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"];
 for (const ninja of ninjaTurtles) {
-    console.log(ninja.toUpperCase()); 
+    // console.log(ninja.toUpperCase()); 
 }
-console.log(ninjaTurtles);
 
 ////////////////////////////////
 // Where is Waldo
 ////////////////////////////////
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                    ["Lucinda", "Jacc", "Neff", "Snoop"],
+                    ["Petunia", ["Baked Goods", "Waldo"]]];
+// 1. Remove Eggbert 
+whereIsWaldo.splice(1, 1);
+  
+// 2. Change "Neff" to "No One"
+whereIsWaldo[1][2] = "No One"; 
 
+// console.log(whereIsWaldo);
 
 ////////////////////////////////
 // Excited Kitten
